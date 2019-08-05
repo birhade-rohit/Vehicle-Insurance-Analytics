@@ -1,0 +1,43 @@
+ISEN-613 Fall-2018 Course Project
+Objective
+
+Risks of a car insurance depend on various factors such as the environment of the insured person, the make of the car, and the insured person. A good understanding of these factors and how they determine the risk of a policy is essential for insurance companies. In this project, you will develop models that predict the risk of an insurance claim. The objective is to predict whether an insured car will file a claim or not (classification).
+
+Data
+
+The data set contains 100,000 policies written within the calendar years of 2005-2006. Each row is the one year’s information for the insured vehicle.
+
+The continuous response variable is the Claim_Amount which shows the amount in dollars received for that vehicle in that year from the insurance company. If the claim amount is zero, then it means the car did not have a claim within that year.
+
+There are 33 input variables. “Household_ID” identifies the household with a number and allows year-to-year tracking of each household. A household may have multiple vehicles insured. Hence, there may be multiple vehicles associated with a particular “Household_ID” within a year. “Calendar_Year” shows the year that the vehicle was insured. "Vehicle" identifies these vehicles (but the same "Vehicle" number may not apply to the same vehicle from year to year). For each vehicle the model year, make, model, and submodel are given. “Cat1-12” are 12 categorical variables that represent miscellaneous characteristics of the vehicle. “OrdCat” is an ordered categorical variable for the vehicle. “Var1-8” are eight continuous variables that represent miscellaneous characteristics of the vehicle. These variables are standardized to have zero mean and standard deviation 1. “NVCat” and “NVVar 1-4” are categorical and continuous variables that capture miscellaneous non-vehicle characteristics associated with the policy.
+
+There are some missing values for some of the features. They are coded as “?”. You can ignore these missing values or make use of them.
+
+Project Instructions
+
+Download the data. Create a categorical response variable called “C_Claim” that shows whether “Claim_Amount” is zero or positive for each row. There should be 720 claims in total. Use “C_Claim” as a response variable to build your classification models.
+
+You are welcome to try as many models as possible ranging from basic models (e.g. logistic regression, LDA, QDA, linear SVM) to more complex models (e.g. considering transformation of inputs). After trying different models, pick your best three. For each of these models, report your technical analysis, the training error, and an approximation of the test error using a technique you see fit (e.g. cross-validation) in 2-pages including the figures and tables. In total, you will have 6-pages of technical analysis for all the three models you worked on. After that, pick your best model and explain why it is your best candidate in 1-page. By Nov 29th 5:00pm, you need to submit the technical analysis of your three models (total 7-pages), as well as the code for your best model. Then, we provide the test data and you run the exact same code you submitted to us on the test data to calculate your test error. Briefly report that result (you will not need more than 1 page). If you want to modify your code to achieve a better test error, you have the option to do so, in which case you need to report the changes as well as the improved rate in 2 pages. By Dec 4th, 5:00pm, you need to add your test results, your optional modification, and your executive summary to the previous report, and submit the final report on e-campus. If you have a modification upon your best model, you should submit the code for that as well.
+
+The final version of your report should have the following structure:
+
+Executive summary (at most 1 page, due Dec 4th) page 1
+Technical report of model 1 (at most 2 pages, due Nov 29th) page 2-3
+Technical report of model 2 (at most 2 pages, due Nov 29th) page 4-5
+Technical report of model 3 (at most 2 pages, due Nov 29th) page 6-7
+Comparison of the 3 models and specifying the best model you want to use for testing (at most 1 page, due Nov 29th) page 8
+Evaluating test points only on your best model and reporting the test error (at most 1 page, due Dec 4th) page 9
+(Optional) Steps to improve your best model or introducing a better model (at most 2 pages, due Dec 4th) page 10-11
+Evaluation of the project: The project has 20 points + 1 bonus: 	Executive summary (3points) 	Technical analysis of model 1-3 (12 points) 	Reasoning for choosing the best model (1 point) 	Evaluating your test result (2 points)  Competition: the group with lowest test error will receive (2 points). Other groups will either receive 1 point or 0 point.  (Bonus) the improvement upon your best method (1 point)
+
+Rules:
+
+1- The results must be reproducible. If we run your best model on test points and get a different test error from what is reported, you will not get points from the competition and lose the points from the technical analysis of the model. The same rule applies to modified code (if submitted).
+
+2- Your code should be a .R file with clear comments on how to run.
+
+3- The report should be concise and to-the-point. The font size should be at least 11, and exceeding the suggested page limits will result in point deduction.
+
+4- Late submissions are penalized at the rate of 0.5 point per hour. 5- Make sure to write a clean executive summary. Remember from HW 2 that this is a non-technical summary of your analysis for a broad audience. Do not include any graphs or statistical concepts in the executive summary.
+
+6- In the last paragraph of the executive summary, the contribution of each individual in the project should be clarified. Evidently, if a group member does not contribute to the project, s/he will not receive any points from the project.
